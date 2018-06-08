@@ -1,0 +1,14 @@
+{
+  "name": "yue-ws-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Yue.",
+  "license": "ISC",
+  "dependencies": {
+    "log4js": "^2.5.3",
+    "yue-asyncall": "0.0.1",
+    "yue-http-util": "^1.0.2",
+    "yue-web-app-core": "0.0.2"
+  }
+}
