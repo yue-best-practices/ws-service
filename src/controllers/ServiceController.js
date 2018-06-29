@@ -100,4 +100,20 @@ module.exports=class ServiceController extends BaseController{
         await next();
     }
 
+    /**
+     * 检测用户是否在线
+     * @param ctx
+     * @param next
+     * @returns {Promise.<void>}
+     */
+    async userIsOnline(ctx,next){
+        let userId=ctx.params.userId;
+        let number=ctx.$helper.formatNumberByString(userId.toString());
+        let index=number%wsMappingConf.length;
+        let wsConf=wsMappingConf[index];
+        let httpUrl=wsConf.httpUrl;
+        ctx.result=await ctx.$webSocketHandler.isOnline(httpUrl,userId);
+        await next();
+    }
+
 };

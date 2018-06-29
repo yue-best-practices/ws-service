@@ -16,5 +16,11 @@ module.exports={
         let method="post";
         url=url+"/broadcast";
         await HttpUtil.instance.sendRequest(method,url,{message},{})
+    },
+
+    async isOnline(url,userId){
+        let method="put";
+        url=`${url}/checkUserIsOnline/${userId}`;
+        return await HttpUtil.instance.sendRequest(method,url,{},{});
     }
 };
