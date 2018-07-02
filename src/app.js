@@ -1,13 +1,9 @@
 /**
  * Created by yuanjianxin on 2018/5/9.
  */
-const App=require('yue-web-app-core');
-const appConf=require('./configs/app.config');
-const routerConf=require('./configs/router.config');
+const server = require('../grpc/server');
 
-const app=new App();
-app.Middleware = appConf.globalMiddlewareConf;
-app.Body=appConf.bodyConf;
-app.Routes=routerConf;
-app.Port=appConf.port;
-app.run();
+server.start((err, data) => {
+    console.error('====grpc err===', err);
+    console.log('====data===', data);
+});
