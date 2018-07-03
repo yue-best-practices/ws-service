@@ -3,7 +3,7 @@
  */
 const wsMappingConf = require('../src/configs/ws-mapping.config');
 const Helper = require('../src/plugins/helper');
-const messages = require('./resources/WebSocketService_pb');
+const messages = require('grpc-ws-service-pb').WebSocketService_pb;
 const webSocketCount = wsMappingConf.length;
 const WebSocketServerUtil = require('../src/plugins/WebSocketServerUtil');
 const AsyncAll = require('yue-asyncall');

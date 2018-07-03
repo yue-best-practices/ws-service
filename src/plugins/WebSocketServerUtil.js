@@ -2,8 +2,8 @@
  * Created by yuanjianxin on 2018/7/2.
  */
 const grpc = require('grpc');
-const messages = require('../../grpc/resources/WebSocketServer_pb');
-const services = require('../../grpc/resources/WebSocketServer_grpc_pb');
+const messages = require('grpc-ws-server-pb').WebSocketServer_pb;
+const services = require('grpc-ws-server-pb').WebSocketServer_grpc_pb;
 
 module.exports = {
 
